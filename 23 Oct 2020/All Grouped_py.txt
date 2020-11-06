@@ -1,0 +1,140 @@
+# Dan K Univ of Buffalo DWave Fun
+# Eat Runny A Series 2X Oct 2020
+
+# Fancy print function please
+from __future__ import print_function  # allow it to run on python2 and python3
+
+pn = "Title: DW_Qubo_EatRunny_A"
+vr = "23 Oct 2020 15:00 E"
+realQm = False; #realQm = True;                                       # For simulation no DW
+
+print( 'Program: ' + pn ); print( 'vr: ' + vr ); print( '\n' );
+if( realQm ):
+    print( 'Set for real QM ')
+else:
+    print( 'pretend QM dry run' )
+    
+# This works with number matrixes, math guy stuff like that
+import numpy as np
+
+# Our most lovable DWAVE box
+if realQm:
+    from dwave.system.samplers import DWaveSampler
+    from dwave.system.composites import EmbeddingComposite
+
+# Load matrix we will touch upand send to QM machine
+qubomatrix = np.loadtxt( 'qubomatrix.txt' )
+print( 'Loaded matrix: \n', qubomatrix, '\n' )
+
+# Convert into QUBO
+qubo = {(i,i):0.0 for i in range( len( qubomatrix ) ) }
+
+# Keep the order of the sample columns consistent
+for index,value in np.ndenumerate( qubomatrix ):
+    if value != 0:
+        qubo[ index ] = value
+
+print('Converted matrix into QUBO for D-Wave:\n', qubo, '\n')
+
+if not( realQm ):
+    print( 'Flag says no QM available, so leaving' )
+    quit()
+
+# Embed and run on the DWave
+sampler = EmbeddingComposite( DWaveSampler() )
+
+# Say something on TTY while QM is going
+someGuy = "Pierre Mihok"
+print( "Hello to: " + someGuy + "From QM in Vancouver! ")
+
+response = sampler.sample_qubo( qubo, num_reads = 10000, annealing_time = 80, chain_strength = 8 )
+print( 'Response from the D-Wave:\n', response, '\n' )
+
+# Save results
+with open( 'results.txt', 'w' ) as file:
+    #file.write('energy\tnum_occurrences\tsample\n')
+    for sample, energy, num_occurrences, cbf in response.record:
+        file.write('%f\t%g\t%d\t%s\n' % (energy,cbf, num_occurrences, sample))
+    print('Saved results in results.txt')
+
+print( 'Program run end' )
+
+
+
+# Dan K Univ of Buffalo DWave Fun
+# Eat Runny A Series 2X Oct 2020
+
+# Fancy print function please
+from __future__ import print_function  # allow it to run on python2 and python3
+
+pn = "Title: DW_Qubo_EatRunny_A"
+vr = "23 Oct 2020 15:05 E"
+realQm = False; realQm = True;                                       # For simulation no DW
+
+print( 'Program: ' + pn ); print( 'vr: ' + vr ); print( '\n' );
+if( realQm ):
+    print( 'Set for real QM ')
+else:
+    print( 'pretend QM dry run' )
+    
+# This works with number matrixes, math guy stuff like that
+import numpy as np
+
+# Our most lovable DWAVE box
+if realQm:
+    from dwave.system.samplers import DWaveSampler
+    from dwave.system.composites import EmbeddingComposite
+
+# Load matrix we will touch upand send to QM machine
+qubomatrix = np.loadtxt( 'qubomatrix.txt' )
+print( 'Loaded matrix: \n', qubomatrix, '\n' )
+
+# Convert into QUBO
+qubo = {(i,i):0.0 for i in range( len( qubomatrix ) ) }
+
+# Keep the order of the sample columns consistent
+for index,value in np.ndenumerate( qubomatrix ):
+    if value != 0:
+        qubo[ index ] = value
+
+print( 'Converted matrix into QUBO for D-Wave:\n', qubo, '\n')
+
+if not( realQm ):
+    print( 'Flag says no QM available, so leaving' )
+    quit()
+
+# Embed and run on the DWave
+sampler = EmbeddingComposite( DWaveSampler() )
+
+# Say something on TTY while QM is going
+someGuy = "Pierre Mihok"
+print( "Hello to: " + someGuy + "From QM in Vancouver! " )
+
+# Pickup solution
+response = sampler.sample_qubo( qubo, num_reads = 10000, annealing_time = 80, chain_strength = 8 )
+print( 'Response from the D-Wave:\n', response, '\n' )
+
+# Save results
+with open( 'results.txt', 'w' ) as file:
+    #file.write('energy\tnum_occurrences\tsample\n')
+    for sample, energy, num_occurrences, cbf in response.record:
+        file.write('%f\t%g\t%d\t%s\n' % (energy,cbf, num_occurrences, sample))
+    print('Saved results in results.txt')
+
+print( 'Program run end' )
+
+
+
+-5 2 4 0
+2 -3 1 0
+4 1 -8 5
+0 0 5 -6
+-16.000000	0	9987	[1 1 1 0 1 1 0 1 1 1]
+-14.000000	0	4	[1 1 0 0 1 1 0 1 1 1]
+-14.000000	0	1	[1 1 1 0 0 1 0 1 1 1]
+-14.000000	0	1	[1 1 1 0 1 0 0 1 1 1]
+-14.000000	0	1	[1 1 1 0 1 1 0 1 1 0]
+-14.000000	0	1	[1 1 1 0 1 1 0 1 0 1]
+-14.000000	0	3	[1 0 1 0 1 1 0 1 1 1]
+-14.000000	0	2	[0 1 1 0 1 1 0 1 1 1]
+

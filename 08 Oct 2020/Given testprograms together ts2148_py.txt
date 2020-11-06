@@ -1,0 +1,273 @@
+# Copyright 2020 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from pegasus_graph import P16
+from matplotlib import pyplot as plt
+import networkx as nx, dwave_networkx as dnx
+
+from minorminer import busclique
+
+clique_cache = busclique.busgraph_cache(P16)
+clique_embedding = clique_cache.largest_clique()
+
+K = nx.complete_graph(len(clique_embedding))
+
+dnx.draw_pegasus_embedding(P16, clique_embedding, K)
+# Copyright 2020 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from pegasus_graph import P6
+from matplotlib import pyplot as plt, colors as mpl_color
+import networkx as nx, dwave_networkx as dnx, minorminer
+
+nodes = 80
+edge_probability = 0.1
+G = nx.gnp_random_graph(nodes, edge_probability, seed = 0)
+
+nx.draw(G)
+
+emb = minorminer.find_embedding(G, P6, random_seed = 1)
+
+dnx.draw_pegasus_embedding(P6, emb, G)
+# Copyright 2020 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from pegasus_graph import P6
+import dwave_networkx as dnx, networkx as nx
+from matplotlib import pyplot as plt, colors as mpl_color
+
+from minorminer import layout
+
+nodes = 200
+degree = 3
+C = nx.random_regular_graph(degree, nodes)
+
+layout_args = {'random_seed': 1, 'return_layouts': True}
+
+emb, (layout_C, _) = layout.find_embedding(C, P6, **layout_args)
+
+nx.draw(C, pos = layout_C)
+
+dnx.draw_pegasus_embedding(P6, emb, C)
+# Copyright 2020 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from pegasus_graph import P16, P6
+import minorminer.layout as mml, dwave_networkx as dnx, networkx as nx
+from matplotlib import pyplot as plt, colors as mpl_color
+
+if False:
+    n = 200
+    C = nx.random_regular_graph(3, n)
+
+    emb, (layout_C, layout_P) = mml.find_embedding(C, P6, random_seed = 1,
+                                                     return_layouts = True,
+                                                     threads = 3)
+
+    plt.figure(figsize=(20, 20))
+
+    nx.draw(C)
+
+    plt.savefig("sparse_graph.png")
+    plt.close()
+
+    plt.figure(figsize=(20, 20))
+    dnx.draw_pegasus_embedding(P6, emb, C)
+    plt.savefig("sparse_embedded.png")
+    plt.close()
+
+
+n = 850
+C = nx.random_regular_graph(3, n)
+
+emb, (layout_C, layout_P) = mml.find_embedding(C, P16, random_seed = 2,
+                                                 return_layouts = True, layout = (None, None),
+                                                 threads = 3, verbose = 2, interactive = True, tries = 30, max_no_improvement = 10000, timeout = 10000000)
+
+plt.figure(figsize=(20, 20))
+
+nx.draw(C)
+
+plt.savefig("sparse_graph_big.png")
+plt.close()
+
+plt.figure(figsize=(20, 20))
+dnx.draw_pegasus_embedding(P16, emb, C)
+plt.savefig("sparse_embedded_big.png")
+plt.close()
+from double_plot import double_plot
+double_plot(C, P16, emb, 'sparse_doubleplot2.png',
+            [{'node_size': 70, 'pos': layout_C},
+             {'node_size': 30}])
+# Copyright 2020 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import dwave_networkx as dnx
+from random import seed, sample
+
+seed(5640)
+
+P16_perfect = dnx.pegasus_graph(16)
+
+mask_nodes = sample(list(P16_perfect), int(.96*len(P16_perfect)))
+
+P16 = P16_perfect.subgraph(mask_nodes).copy()
+
+
+P6_perfect = dnx.pegasus_graph(6)
+
+mask_nodes = sample(list(P6_perfect), int(.96*len(P6_perfect)))
+
+P6 = P6_perfect.subgraph(mask_nodes).copy()
+These are the resource files used to create the [Pegasus embedding video](https://youtu.be/aAhvyxzJyQE)
+
+The file `pegasus_graph.py` constructs a P16 and a P6 graph.  The files 
+`embed_draw_clique.py`, `embed_draw_random.py` and `embed_draw_sparse.py`
+are snippets which construct and embed graphs, and have rudimentary 
+plotting calls.  The file `double_plot.py` is used to create the actual 
+images used in the video.
+# Copyright 2020 D-Wave Systems Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from matplotlib import pyplot as plt, colors as mpl_color
+import networkx as nx, dwave_networkx as dnx
+
+def color(i, n):
+    r, g, b = mpl_color.hsv_to_rgb((i/n, .25 + (i%4)/4, 1))
+    return r, g, b, 1.
+
+def double_plot(S, T, emb, filename, params):
+    fig = plt.figure(figsize = (40, 20))
+    axes = fig.subplots(nrows=1, ncols=2)
+    
+    n = len(S)
+    colors = {v: color(i, n) for i, v in enumerate(S)}
+
+    node_colors = list(colors[v] for v in S)
+
+    if params[0].get('pos') is None:
+        params[0]['pos'] = nx.kamada_kawai_layout(S)
+
+    nx.draw(S,
+            node_color = node_colors,
+            ax = axes[0],
+            **params[0])
+
+    dnx.draw_pegasus_embedding(T, emb, S,
+                               crosses = True, 
+                               chain_colors = colors,
+                               ax = axes[1],
+                               **params[1])
+
+
+    fig.tight_layout()
+    plt.savefig(filename)
+    plt.close()
+
+def yield_double_plot(P, filename):
+    fig = plt.figure(figsize = (40, 20))
+    axes = fig.subplots(nrows=1, ncols=2)
+    
+    dnx.draw_pegasus_yield(P, node_size = 80, ax = axes[0])
+
+    dnx.draw_pegasus(P, crosses = True, node_size = 80, node_color = "#f37820",
+                     edge_color = "#17bebb", ax = axes[1])
+
+    fig.tight_layout()
+    plt.savefig(filename)
+    plt.close()
+    
+if __name__ == '__main__':
+    from pegasus_graph import P6, P16
+
+    from embed_draw_random import G, emb as random_embedding
+
+    double_plot(G, P6, random_embedding,
+                'random_doubleplot.png',
+                [{'node_size': 100}, {'node_size': 30}])
+
+    from embed_draw_clique import K, clique_embedding
+
+    double_plot(K, P16, clique_embedding, 'clique_doubleplot.png',
+                [{'node_size': 100, 'pos': nx.circular_layout(K), 'width': 1, 
+                 'edge_color': (0, 0, 0, .1)}, {'node_size': 10}])
+
+    from embed_draw_sparse import C, layout_C, emb as sparse_embedding
+
+    double_plot(C, P6, sparse_embedding, 'sparse_doubleplot.png',
+                [{'node_size': 70, 'pos': layout_C},
+                 {'node_size': 30}])
+
+    fig = plt.figure(figsize = (20, 20))
+    dnx.draw_pegasus(dnx.pegasus_graph(3), node_color = "#f37820",
+                     edge_color = "#17bebb", crosses = True)
+    plt.savefig("P3.png")
+    plt.close()
+
+    yield_double_plot(P6, "yield_doubleplot.png")

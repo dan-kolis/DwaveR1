@@ -1,0 +1,8 @@
+ls -ltr
+total 24
+-r--r--r-- 1 gitpod gitpod 1918 Oct 23 19:04 1500.py
+-rw-r--r-- 1 gitpod gitpod  299 Oct 23 19:06 results.txt
+-rw-r--r-- 1 gitpod gitpod 1937 Oct 23 19:27 1505.py
+-rw-r--r-- 1 gitpod gitpod   36 Oct 24 19:33 qubomatrix.txt
+-rw-r--r-- 1 gitpod gitpod 4190 Nov  5 02:58 allGrouped.txt
+Leap IDE /workspace/simple-ocean-programs/Basic_Programs/23Oct2020 $ cat 1500.py  1505.py qubomatrix.txt results.txt >allGrouped.txt
