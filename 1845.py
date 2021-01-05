@@ -1,0 +1,96 @@
+
+# Dan K Univ of XXXXXXXX DWave Fun
+# Eat Runny A Series began 2X Oct 2020
+
+# Fancy print function please
+from __future__ import print_function  # allow it to run on python2 and python3
+
+pn = "Title: DW_Qubo_EatRunny_D"
+vr = "056 Dec 2020 18:45 Z"
+realQm = False; realQm = True;                                       # For simulation no DW
+
+sampleCount = 100;
+inputFile = 'qubomatrix'
+inputFile = 'queensN8by8'
+inputFile = 'D16'
+extQubo = '.qbo'
+
+print( 'Program: ' + pn ); print( 'vr: ' + vr ); print( '\n' );
+if( realQm ):
+    print( 'Set for real QM ')
+else:
+    print( 'Pretend QM dry run' )
+    
+# This works with number matrixes, math guy stuff like that
+import numpy as np
+
+# Our most lovable DWAVE box
+if realQm:
+    from dwave.system.samplers import DWaveSampler
+    from dwave.system.composites import EmbeddingComposite
+
+# Load matrix we will touch upand send to QM machine
+
+qubomatrix = np.loadtxt( inputFile + extQubo )
+print( 'Loaded matrix: \n', qubomatrix, '\n' )
+
+# Convert into QUBO
+qubo = {(i,i):0.0 for i in range( len( qubomatrix ) ) }
+
+# Keep the order of the sample columns consistent
+for index,value in np.ndenumerate( qubomatrix ):
+    if value != 0:
+        qubo[ index ] = value
+
+print( 'Converted matrix into QUBO for D-Wave:\n', qubo, '\n')
+
+if not( realQm ):
+    print( 'NOTE: Flag says no QM available, so leaving' )
+
+# Embed and run on the DWave
+if realQm:
+    sampler = EmbeddingComposite( DWaveSampler() )
+
+# Say something on TTY while QM is going
+someFact = "Test"; someFact = "Hack at matrixes to grasp whats is really happening";
+if someFact != "":
+    print( "Intention fact: " + someFact + " / Using DW QM in Vancouver! " )
+
+# Pickup solution
+if realQm:
+    response = sampler.sample_qubo( qubo, num_reads = sampleCount, annealing_time = 80, chain_strength = 8 )
+    print( 'Response from the D-Wave:\n', response, '\n' )
+
+# Save results
+uz = inputFile + '.rep'
+with open( uz, 'w' ) as file:
+    ln1 = 'Version:' + vr + '\n'
+    ln2 = 'Name: ' + pn + '\n'
+    ln3 = 'A Python program for DWAVE QM so its a .py\n'
+    ln4 = 'Fact: ' + someFact + '\n'
+    ln5 = 'Sample count: ' + str( sampleCount ) + '\n\n'
+    ln6 = 'Input file making a named set: ' + inputFile + extQubo
+    file.write( ln1 ); file.write( ln2 ); file.write( ln3 );
+    file.write( ln4 ); file.write( ln5 ); file.write( ln6 )
+    file.write( '\n')
+    
+    file.write( "Raw input file:\n" )
+    file.write( str( qubomatrix ) ); file.write( '\n\n' )
+
+    file.write( "Formatted for qubits:\n" )
+    file.write( str( qubo ) ); file.write( '\n\n' );
+
+# Real info, sure    
+    if realQm:
+        for sample, energy, num_occurrences, cbf in response.record:
+            file.write( '%f\t%g\t%d\t%s\n' % ( energy,cbf, num_occurrences, sample ) )
+    file.write( 'Run completed\n' )    
+
+print('Saved results in file: ' + uz + '\n' )
+print( 'Program run end' )
+
+file.close()
+
+
+
+
