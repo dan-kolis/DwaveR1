@@ -1,0 +1,1000 @@
+ 1048  cd dank
+ 1049  ls -l /media/dank
+ 1050  ls -l /media/dank >1006.REPORT
+ 1051  cat 1006.REPORT 
+ 1052  ls -l /media/dank/Whoops/
+ 1053  file /media/dank/Whoops/
+ 1054  touch /media/dank/Whoops/testFILE.TEXT
+ 1055  gedit /media/dank/Whoops/testFILE.TEXT
+ 1056  cat /media/dank/Whoops/testFILE.TEXT
+ 1057  echo USB postage stamp put in
+ 1058  echo clicked and    toast '4.0 Media' shows
+ 1059  history >1008.HISTRY
+ 1060  cat /media/dank/
+ 1061  ls -l /media/dank/
+ 1062  ls -l /media/dank/ >1009.REPORT
+ 1063  chmod 444 *
+ 1064  file /media/dank/Whoops/
+ 1065  file /media/dank/Whoops/testFILE.TEXT 
+ 1066  file /media/dank/F84E-1690/
+ 1067  ls /media/dank/F84E-1690/
+ 1068  df -h /media/dank/F84E-1690/
+ 1069  mount >1011.REPORT
+ 1070  ls -ltr *.REPORT
+ 1071  diff 1004.REPORT 1005.REPORT 
+ 1072  diff 1004.REPORT 1011.REPORT 
+ 1073  diff 1004.REPORT 1011.REPORT >Differs.REPORT 
+ 1074  grep -i blk Differs.REPORT 
+ 1075  grep -i blk Differs.REPORT >1012.CLI
+ 1076  chmod 444 *
+ 1077  cat 1012.CLI 
+ 1078  ls /home/dank/mpoint/
+ 1079  cat 1012.CLI 
+ 1080  ls /media/dank/F84E-1690/
+ 1081  mount /media/dank/F84E-1690/   /home/dank/mpoint/
+ 1082  sudo mount /media/dank/F84E-1690/   /home/dank/mpoint/
+ 1083  fdisk -l
+ 1084  sudo fdisk -l
+ 1085  sudo fdisk -l|grep mmc
+ 1086  sudo fdisk -l|grep mmc >1016.REPORT
+ 1087  cat 1016.REPORT 
+ 1088  sudo mount /dev/z0sdb1 /media/z0usb-drive
+ 1089  sudo mount /dev/mmcblk0 /home/dank/mpoint/
+ 1090  cat /etc/fstab 
+ 1091  cat /etc/fstab >1019.REPORT
+ 1092  ls /media/dank/
+ 1093  df -h  /media/dank/F84E-1690/
+ 1094  grep -i unmount *
+ 1095  gedit 1008.HISTRY 
+ 1096  mv 1008.HISTRY 1008.HISTORY
+ 1097  gedit *.HELP&
+ 1098  umount --help
+ 1099  umount --help >z.1
+ 1100  umount --help >z.2
+ 1101  rm z.?
+ 1102  man umount
+ 1103  man umount >z.1
+ 1104  umount --help
+ 1105  umount --help >z.2
+ 1106  cat z.1 z.2 >umount.HELP
+ 1107  ls -ltrh
+ 1108  rm z.?
+ 1109  chmod 444 *
+ 1110  sudo ls
+ 1111  mount|grep -i mmc
+ 1112  umount /media/dank/F84E-1690 
+ 1113  sudo ls
+ 1114  sudo mount /dev/mmcblk0p1 /home/dank/mpoint/
+ 1115  ls -l mpoint
+ 1116  ls -l ~/mpoint/
+ 1117  echo WOW first time I made this work !
+ 1118  history >1026.HISTORY
+ 1119  chmod 444 *
+ 1120  mount
+ 1121  mount|mm
+ 1122  mount|grep mm
+ 1123  mount|grep mm >1027.CLI
+ 1124  cat 1027.CLI
+ 1125  echo mpoin tis the point added via cli
+ 1126  echo mpoint is the point added via cli
+ 1127  history >1029.HISTORY
+ 1128  cat /etc/fstab 
+ 1129  whoami
+ 1130  ls -l .
+ 1131  exit
+ 1132  ls -l
+ 1133  cd Monika\ Fox/
+ 1134  ls
+ 1135  ls -lSr
+ 1136  rm *.MKV
+ 1137  ls -lSr
+ 1138  du -h .
+ 1139  df -h .
+ 1140  cd ..
+ 1141  du -h .
+ 1142  df -h .
+ 1143  exit
+ 1144  df -h .
+ 1145  du -h .
+ 1146  df -h .
+ 1147  du -h .
+ 1148  du -h '10 Nov 2023'/
+ 1149  exit
+ 1150  df -h .
+ 1151  du -h .
+ 1152  ls -l
+ 1153  mkdir "General slutware"
+ 1154  cd General\ slutware/
+ 1155  mv ../*.jpg .
+ 1156  ls
+ 1157  cd ..
+ 1158  ls
+ 1159  ls -ltrh
+ 1160  cd ..
+ 1161  mv 'Outfit images'/ "Barely clothed - File by urge"
+ 1162  exit
+ 1163  echo rename txt text *.txt
+ 1164  ls -l
+ 1165  mv dddddownload.jpg dddddownload.jpeg
+ 1166  mv ihhmages.jpg jhjhgjh.jpeg
+ 1167  ls
+ 1168  rename jpeg jpg *.txt
+ 1169  ls
+ 1170  rename --help
+ 1171  rename --help|more
+ 1172  rename jpeg jpg *.txt
+ 1173  rename jpeg jpg *.jpeg
+ 1174  ls
+ 1175  rename .jpeg .jpg *.jpeg
+ 1176  rename '.jpeg' '.jpg' *.jpeg
+ 1177  rename 'jpeg' 'jpg' *.jpeg
+ 1178  rename 'jpeg' 'jpg' *
+ 1179  strict
+ 1180  man rename
+ 1181  echo rename "s/SEARCH/REPLACE/g"  *
+ 1182  ls -l
+ 1183  echo rename "s/.jpeg/.jpg/g"  *
+ 1184  ls
+ 1185  echo rename "s/jpeg/jpg/g"  *
+ 1186  ls 
+ 1187  chmod 777 *
+ 1188  rename "s/jpeg/jpg/g"  *
+ 1189  ls -l
+ 1190  zzrename "s/jpeg/jpg/g"  *
+ 1191  mv dddddownload.jpg d1.jpeg
+ 1192  mv jhjhgjh.jpg ggd.jpeg
+ 1193  alias jpeg-tojpg='rename "s/jpeg/jpg/g" *'
+ 1194  alias
+ 1195  jpeg-tojpg 
+ 1196  ls
+ 1197  exit
+ 1198  ls ba*
+ 1199  gedit .bashrc 
+ 1200  ./bashrc
+ 1201  pwd
+ 1202  gedit .bashrc 
+ 1203  alias jpeg-to-jpg='rename "s/jpeg/jpg/g" *'
+ 1204  alias
+ 1205  jpeg-to-jpg 
+ 1206  rename ksdhfsjkhk
+ 1207  chmod 444 *
+ 1208  touch 08-Today.TEXT 
+ 1209  touch 09-Today
+ 1210  touch 10-Made-Things.TEXT 
+ 1211  touch 11-Today-Main-Code_Again\ .TEXT 
+ 1212  touch 08-Today.TEXT 
+ 1213  touch 09-Today.TEXT 
+ 1214  touch 10-Today.TEXT 
+ 1215  touch 11-Today-Main-Code_Again\ .TEXT 
+ 1216  touch 08-Today.TEXT 
+ 1217  touch 09-Today.TEXT 
+ 1218  touch 10-Today.TEXT 
+ 1219  touch 11-Today-Main-Code_Again\ .TEXT 
+ 1220  chmod 444 *
+ 1221  chmod 666 11-Today-Main-Code_Again\ .TEXT 
+ 1222  png-to-jpg-
+ 1223  png-to-jpg-C
+ 1224  png-to-jpg-B
+ 1225  ls
+ 1226  png-to-jpg-D
+ 1227  ls
+ 1228  ls -l
+ 1229  ls -ltrh
+ 1230  rm *.png
+ 1231  exit
+ 1232  ls -ltrh
+ 1233  rm -r __pycache__/
+ 1234  ls *.bz
+ 1235  ls *.gz
+ 1236  rm *.gz
+ 1237  rm *.gz *.bz
+ 1238  ls *.gz
+ 1239  ls *.bz
+ 1240  cd 
+ 1241  cd ~/About_WIXM/Venter\ V3\ simulation/Python_and_Dan/
+ 1242  ls -ltrh Day5*/
+ 1243  ls -ltrhd Day5*/
+ 1244  chmod 0 Day532
+ 1245  ls -ltrhd Day5*/
+ 1246  cd Day533
+ 1247  code .
+ 1248  ls -ltrg *.bioproject
+ 1249  cp 'Edit can do more OO.bioproject'  1947.BU
+ 1250  file 1947.BU 
+ 1251  code basicSwitchboard.py 
+ 1252  grep go_Text_Editor_Loose_Window *.py
+ 1253  code taskingFunction.py 
+ 1254  grep -i kanyedit *.py
+ 1255  code basicSwitchboard.py 
+ 1256  code main.py 
+ 1257  wipb;wipb;wipa
+ 1258  wipa
+ 1259  cd ..
+ 1260  ls -ltrh
+ 1261  sudo shutdonw -h now
+ 1262  sudo shutdown -h now
+ 1263  wipb;wipa
+ 1264  code .
+ 1265  grep -i toplinees *.py
+ 1266  gedit 0819.CODE
+ 1267  cp screenBuilder1.py 0829.BU
+ 1268  grep concatTsToScreen1 *.py
+ 1269  code main.py 
+ 1270  echo textLabelLine
+ 1271  wipb
+ 1272  grep  textLabelLine *.py
+ 1273  grep  textLabelLine *.py|wc
+ 1274  grep -L  textLabelLine *.py|wc
+ 1275  grep -L  textLabelLine *.py
+ 1276  grep -l  textLabelLine *.py
+ 1277  history 
+ 1278  cp screenBuilder1.py 0944.BU
+ 1279  wipb
+ 1280  grep fg *.py
+ 1281  grep fg *.py|more
+ 1282  killall -9 chrome
+ 1283  google-chrome&
+ 1284  killall -9 chrome
+ 1285  code main.py 
+ 1286  grep SBOL *.py
+ 1287  code fractionScreens.py 
+ 1288  gedit 1246.CLI
+ 1289  gedit 1246.CLI&
+ 1290  wipb;wipa
+ 1291  exit
+ 1292  ls
+ 1293  pwd
+ 1294  ls -ltrh X*
+ 1295  ls -ltrh 
+ 1296  pwd
+ 1297  ls
+ 1298  ls
+ 1299  ls -ltrh
+ 1300  cd About\ 
+ 1301  ls -ltrh
+ 1302  cd Day533
+ 1303  ls -ltrh ..
+ 1304  cd Day533
+ 1305  ls -ltrh
+ 1306  code .
+ 1307  cd ~
+ 1308  ls -ltrh
+ 1309  cd "1303 Filter evasion"/
+ 1310  ls -ltrh
+ 1311  cd '11 Nov 2023'
+ 1312  ls -ltrh
+ 1313  cat PH\ GOD\ two\ great\ videos.REPORT 
+ 1314  ls -ltrh
+ 1315  gedit&
+ 1316  firefox 
+ 1317  pwd
+ 1318  nano .xDefaults
+ 1319  cat .xDefaults
+ 1320  xrdb kjfhshjk
+ 1321  xrdb kjfhshjkxterm
+ 1322  xterm 
+ 1323  pwd
+ 1324  xterm
+ 1325  xrdb
+ 1326  which xrdb
+ 1327  which xrdba
+ 1328  pwd
+ 1329  ls -ltrh
+ 1330  pwd
+ 1331  cat .xDefaults 
+ 1332  xrdb .xDefaults 
+ 1333  xterm
+ 1334  nano .xDefaults 
+ 1335  xrdb .xDefaults 
+ 1336  xterm
+ 1337  cd '1303 Filter evasion'/
+ 1338  cd '11 Nov 2023'/
+ 1339  ls
+ 1340  cat PH\ GOD\ two\ great\ videos.REPORT 
+ 1341  https://www.heavy-r.com/free_porn/triple-penetration_25.ls -l
+ 1342  ls -l
+ 1343  cat PH\ GOD\ two\ great\ videos.REPORT 
+ 1344  gedit &
+ 1345  gedit "PH GOD two great videos.REPORT" 
+ 1346  https://www.heavy-r.com/video/190723/Queen_Of_Sluts/10link
+ 1347  268841011/11/202317:45:52Slut In Strait Jacket Tped In Gangbanghttps://www.heavy-r.com/video/343759/Slut_In_Strait_Jacket_Tped_In_Gangbang/10link
+ 1348  278841111/11/202317:25:48Triple Penetration Videos - Free Porn Videos - Page 26https://www.heavy-r.com/free_porn/triple-penetration_25.html#_30link
+ 1349  ------------------ history pulled as above -------------------
+ 1350  268841011/11/202317:45:52Slut In Strait Jacket Tped In Gangbanghttps://www.heavy-r.com/video/343759/Slut_In_Strait_Jacket_Tped_In_Gangbang/10link
+ 1351  get https://www.heavy-r.com/video/343759/Slut_In_Strait_Jacket_Tped_In_Gangbang/
+ 1352  wget https://www.heavy-r.com/video/343759/Slut_In_Strait_Jacket_Tped_In_Gangbang/
+ 1353  wget https://www.heavy-r.com/free_porn/triple-penetration_25.html#_30link
+ 1354  wget https://www.heavy-r.com/free_porn/triple-penetration_25.html#_30linkzzz
+ 1355  wget https://www.heavy-r.com/free_porn/triple-penetration_25.html#_30lin
+ 1356  wget https://www.heavy-r.com/free_porn/triple-penetration_25.html
+ 1357  history >1537.HISTORY
+ 1358  ls -ltrh
+ 1359  exit
+ 1360  cd '1303 Filter evasion'/
+ 1361  ls -ltrh
+ 1362  cd '11 Nov 2023'/
+ 1363  ls -ltrh
+ 1364  gedit *&
+ 1365  killall -9 chrome
+ 1366  ls -ltrh
+ 1367  cd "Better Heavy R Scraping"/
+ 1368  ls
+ 1369  cat Read-Me.TEXT 
+ 1370  mkdir 26
+ 1371  cd 26
+ 1372  simplescreenrecorder 
+ 1373  du -h .
+ 1374  cd '20 Oct 2023'/
+ 1375  du -h .
+ 1376  ls -lSr
+ 1377  du -h Lyna\ Very\ diverse\ video/
+ 1378  du -h .
+ 1379  ls -lSr
+ 1380  ls -lSh
+ 1381  ls -lSh *.MKV
+ 1382  du -h .
+ 1383  df -h .
+ 1384  du -h .
+ 1385  ls -ltrd */
+ 1386  pwd
+ 1387  cd /media/dank/F84E-1690/
+ 1388  du -h .
+ 1389  df -h .
+ 1390  ls -ltrh
+ 1391  cd Day533
+ 1392  code .
+ 1393  killall -p chrome
+ 1394  code .
+ 1395  wipb
+ 1396  cd mediacache/
+ 1397  ls
+ 1398  nano 1929.CODE
+ 1399  wipb
+ 1400  cd ..
+ 1401  wipb
+ 1402  wipa
+ 1403  grep sayoneseq *.py
+ 1404  nano 1954.TEXT
+ 1405  grep kSAYONEST *.py
+ 1406  mode modalSimple.py 
+ 1407  code modalSimple.py 
+ 1408  grep seqLookMine  *.py
+ 1409  history 
+ 1410  grep kSAYONEST *.py
+ 1411  ls -ltrh
+ 1412  code 1954.TEXT 
+ 1413  grep kBOREEDIT *.py
+ 1414  code fractionScreens.py 
+ 1415  grep -i fulllook *.py
+ 1416  grep -i fusslook *.py
+ 1417  ls -ltrh
+ 1418  ls -ltrh *.CODE
+ 1419  nano 0819.CODE 
+ 1420  ls -ltrh *.CODE
+ 1421  nano 2021.CODE
+ 1422  wipb
+ 1423  nano 2021.CODE
+ 1424  ls -ltrh *.CODE
+ 1425  code 2021.CODE 0819.CODE 
+ 1426  wipb;wipb;wipa
+ 1427  touch .
+ 1428  touch ./..
+ 1429  touch ./....
+ 1430  touch ./../..
+ 1431  touch ./../../..
+ 1432  touch ./../../../..
+ 1433  touch ./../../../../..
+ 1434  cd ..
+ 1435  ls -ltrh
+ 1436  cp 2110-ALLALL.tar.gz /media/dank/HARRIET/BU/
+ 1437  exit
+ 1438  cd /media/dank/TUNA/
+ 1439  ls -ltrhd */
+ 1440  ls -ltrhd --time-style=long-iso */
+ 1441  cat ~/Pictures/"Tuna before today by time.REPORT"
+ 1442  cat ~/Pictures/"Tuna before today by time.REPORT"|more
+ 1443  ls -lhd --time-style=long-iso */ 
+ 1444  ls -ltrhd --time-style=long-iso */ >~/Pictures/"Tuna before today by name.png"
+ 1445  df -h . >~/"Pretty full.REPORT"
+ 1446  ls -ltrh
+ 1447  ls ~/Pictures/
+ 1448  df -h . >~/Pictures/"Pretty full.REPORT"
+ 1449  ls ~/Pictures/
+ 1450  cat >~/Pictures/"Pretty full.REPORT"
+ 1451  cat ~/Pictures/"Pretty full.REPORT"
+ 1452  df -h . >~/Pictures/"Pretty full.REPORT"
+ 1453  cat ~/Pictures/"Pretty full.REPORT"
+ 1454  sudo 
+ 1455  sudo ls
+ 1456  sudo baobab 
+ 1457  du -h ~/About_WIXM/
+ 1458  df -h ~/About_WIXM/
+ 1459  cd About_WIXM
+ 1460  df -h .
+ 1461  du -h .
+ 1462  sudo ls
+ 1463  sudo baobab 
+ 1464  sudo baobab .
+ 1465  sudo ls
+ 1466  sudo baobab .
+ 1467  cd ..
+ 1468  cd About_WIXM
+ 1469  sudo ls
+ 1470  baobab .
+ 1471  sudo ls
+ 1472  baobab .
+ 1473  ls -l .
+ 1474  cd ..
+ 1475  ls -lhd Ab*
+ 1476  cd About_WIXM
+ 1477  ls -ltrh
+ 1478  cd Venter\ V3\ simulation/
+ 1479  ls -ltrh
+ 1480  cd Python_and_Dan/
+ 1481  ls -ltrh
+ 1482  exit
+ 1483  cd About_WIXM/Venter\ V3\ simulation/Python_and_Dan/
+ 1484  ls -ltrh
+ 1485  sudo ls
+ 1486  sudo  nemo
+ 1487  ls -ltrh
+ 1488  cd Venter\ V3\ simulation/
+ 1489  ls -ltrh
+ 1490  cd Python_and_Dan/
+ 1491  ls -ltrh
+ 1492  exit
+ 1493  touch .
+ 1494  ls -ltrh
+ 1495  cd Python_and_Dan/
+ 1496  ls -ltrh
+ 1497  ls -ltrh Day???
+ 1498  ls -ltrhd Day???
+ 1499  sudo du -h Day5??
+ 1500  sudo du -h Day533
+ 1501  sudo du -h Day510
+ 1502  sudo du -h Day511
+ 1503  sudo du -h Day512
+ 1504  sudo du -h Day513
+ 1505  sudo du -h Day520
+ 1506  sudo du -h Day521
+ 1507  sudo du -h Day522
+ 1508  sudo du -h Day523
+ 1509  cd About_WIXM_13Nov23/
+ 1510  sudo ls
+ 1511  baobab .
+ 1512  exit
+ 1513  touch .
+ 1514  du -h .
+ 1515  sudo ls
+ 1516  rm -r Chrome/
+ 1517  ls -ltrhd 
+ 1518  du -h .
+ 1519  ls -ltrd VS
+ 1520  ls -ltrd VS*
+ 1521  rm -r 'VS Code 1'/
+ 1522  df -h .
+ 1523  cd /
+ 1524  sudo ls
+ 1525  sudo namo
+ 1526  sudo nemo
+ 1527  touch .
+ 1528  ls -ltrh
+ 1529  code .
+ 1530  exit
+ 1531  sudo ls
+ 1532  sudo nemo 
+ 1533  exit
+ 1534  killall -p chrome
+ 1535  touch .
+ 1536  cd Venter\ V3\ simulation/
+ 1537  touch .
+ 1538  cd Python_and_Dan/
+ 1539  ls -ltrh
+ 1540  cd Day533
+ 1541  code main.py 
+ 1542  exit
+ 1543  ls -ltr
+ 1544  png-to-jpg-B 
+ 1545  ls -ltrh
+ 1546  ls *.png
+ 1547  rm *.png
+ 1548  exit
+ 1549  cd ..
+ 1550  chmod 0 Day533
+ 1551  cd Day534
+ 1552  code main.py 
+ 1553  ls -ltrh
+ 1554  code main.py globalIdeas.py 
+ 1555  ls -ltrh
+ 1556  ls -ltrh *.CODE
+ 1557  code 20??.CODE 08* 
+ 1558  grep -i toplinees *.py
+ 1559  code basicSwitchboard.py screenBuilder1.py 
+ 1560  grep -i toplinees *.pylllllllllll
+ 1561  nano 1248.CODE
+ 1562  chmod 444 1248.CODE
+ 1563  cat 1248.CODE 
+ 1564  grep gi.kSAYONEST *.py
+ 1565  wipb;wipb;wipa
+ 1566  code avMedia.py 
+ 1567  nano 1254.CODE
+ 1568  chmod 444 1254.CODE 
+ 1569  grep aCbWhenEditsToSeqText *.py
+ 1570  ls -ltrh
+ 1571  cat 1254.CODE 
+ 1572  grep aCbWhenEditsToSeqText *.py
+ 1573  nano figured-out.CLI
+ 1574  chmod 444 fi*
+ 1575  wipb
+ 1576  alias 
+ 1577  cat wip-BU.sh 
+ 1578  cp wip-BU.sh  thinking.CLI
+ 1579  chmod 444 thinking.CLI 
+ 1580  code thinking.CLI 
+ 1581  ls -ltrh *.tar
+ 1582  ls  *.tar
+ 1583  ls -ltrh
+ 1584  tar -tf 1301-py.tar.gz 
+ 1585  tar -tf 1301-py.tar.gz |grep py
+ 1586  tar -tf 1301-py.tar.gz |grep py|grep wc
+ 1587  tar -tf 1301-py.tar.gz |grep py
+ 1588  ls -ltrh *.py|more
+ 1589  ls tkf*
+ 1590  cat tkf* |more
+ 1591  mkdir 'TK testing pieces"
+ 1592  mkdir 'TK testing pieces'
+ 1593  cd 'TK testing pieces'/
+ 1594  mv ../tk* .
+ 1595  cp tkdocs.WWW ..
+ 1596  ls
+ 1597  ls -ltrh
+ 1598  tar -czf 1313.tar *.py
+ 1599  ls -ltrh
+ 1600  rm *.py
+ 1601  ls
+ 1602  cat tk_Tkk_01 
+ 1603  rm tk_Tkk_01 
+ 1604  cd ..
+ 1605  grep gulper *.py
+ 1606  nano new bc-gulper.MARK
+ 1607  ls -ltrh
+ 1608  cat new 
+ 1609  mv new "New bc-gulper now.MARK"
+ 1610  chmod "New bc-gulper now.MARK" 
+ 1611  chmod 444 "New bc-gulper now.MARK" 
+ 1612  grep aCbWhenEditsToSeqText *.py
+ 1613  cp insertableEditors.py 1326.BU
+ 1614  wipb
+ 1615  grep place_Image_Residue_InCor *.py
+ 1616  code fractionScreens.py 
+ 1617  grep -i bc-gulper *.py
+ 1618  wipb
+ 1619  wipb;wipa
+ 1620  sudo baobab .
+ 1621  cd '1303 Special Collection'/
+ 1622  ls
+ 1623  ls -lSr
+ 1624  ls -lSrh
+ 1625  rm -i LL*
+ 1626  ls -lSrh
+ 1627  ls *.tar
+ 1628  rm *.tar
+ 1629  cd ..
+ 1630  df -h .
+ 1631  ls *.png
+ 1632  cd '1303 Special Collection'/
+ 1633  ls *.png
+ 1634  png-to-jpg-C 
+ 1635  rm *.png
+ 1636  ld
+ 1637  ls
+ 1638  cd Nicole\ Black/
+ 1639  ls
+ 1640  ls -l
+ 1641  cd ..
+ 1642  ls -ldtrd */
+ 1643  cd Lots\ of\ Lyna/
+ 1644  ls
+ 1645  ls *.png
+ 1646  exit
+ 1647  ls
+ 1648  ls *
+ 1649  ls *.crash
+ 1650  ls -ltrh
+ 1651  rm _opt_google_chrome_chrome.1000.crash 
+ 1652  mv *.crash ./Stashed-003
+ 1653  sudo ls
+ 1654  mv *.crash ./Stashed-003
+ 1655  ls
+ 1656  touch .
+ 1657  touch ./..
+ 1658  touch ./../..
+ 1659  touch ./../../..
+ 1660  touch ./../../../..
+ 1661  touch ./../../../../..
+ 1662  ls -ltrh
+ 1663  chmod 777 *.py
+ 1664  code main.py 
+ 1665  grep -i gulpter *.py
+ 1666  grep -i gulper *.py
+ 1667  code fractionScreens.py    insertableEditors.py 
+ 1668  wipb
+ 1669  nano 1926.CODE
+ 1670  echo         self.gulperDirect = "laughlaugh"
+ 1671  history 
+ 1672  wipb
+ 1673  history 
+ 1674  nano 1932.CODE
+ 1675  ls -ltrh *.CODE
+ 1676  code 1926.CODE 1932.CODE 
+ 1677  grep -i gulper *.py
+ 1678  wipb
+ 1679  code main.py 
+ 1680  wipb;wipa
+ 1681  cd ..
+ 1682  ls -ltrh
+ 1683  exit
+ 1684  tar -czf 2106.tar
+ 1685  tar -czf 2106.tar *
+ 1686  ls -ltrh
+ 1687  mv 2106 ..
+ 1688  ls
+ 1689  ls -ltrh
+ 1690  png-to-jpg-C 
+ 1691  rm *.png
+ 1692  ls ../*.jpg
+ 1693  mv ../*.jpg    .
+ 1694  cd ..
+ 1695  ls -ltrh
+ 1696  code .
+ 1697  code main.py 
+ 1698  ls *.bz
+ 1699  ls *.gz
+ 1700  rm *.gz
+ 1701  rm *.bz
+ 1702  wipb;wipb;wipa
+ 1703  du -h .
+ 1704  ls -ltrh ..
+ 1705  du -h .
+ 1706  wipb;wipa
+ 1707  mkdir Day535-X
+ 1708  cd Day535-X
+ 1709  ls -ltrh ..
+ 1710  cd ..
+ 1711  cd Day534
+ 1712  wipb
+ 1713  ls -ltrh
+ 1714  wipa
+ 1715  ls -ltrh ..
+ 1716  cd ..
+ 1717  ls -ltrh
+ 1718  c Day534
+ 1719  cd Day534
+ 1720  ls -ltrh
+ 1721  cd Day535-X/
+ 1722  ls
+ 1723  cd ..
+ 1724  mv Day535-X/ ..
+ 1725  cd ..
+ 1726  cd Day535-X/
+ 1727  ls
+ 1728  ls -ltrh ..
+ 1729  df -h .
+ 1730  cp ../1307-ALLALL.tar.gz .
+ 1731  ls
+ 1732  tar -xf 1307-ALLALL.tar.gz 
+ 1733  du -h .
+ 1734  rm 1307-ALLALL.tar.gz 
+ 1735  rm 1305-py.tar.gz 
+ 1736  cd ..
+ 1737  ls -ltrd */
+ 1738  du -h Day534
+ 1739  du -h Day535-X
+ 1740  chmod 0 Day534/
+ 1741  chmod 777 Day535-X/
+ 1742  mv Day535-X Day535
+ 1743  ls -ltrh
+ 1744  cd Day535/
+ 1745  code .
+ 1746  grep -i 'all nuc' *.py
+ 1747  code manageSequences.py 
+ 1748  grep -i bu-g *.py
+ 1749  grep -i bc-g *.py
+ 1750  cp manageSequences.py 1339.BU
+ 1751  wipb
+ 1752  nano 1356.TEXT
+ 1753  cp 1356.TEXT SCRAP-PAPER.CODE 
+ 1754  code SCRAP-PAPER.CODE 
+ 1755  cp SCRAP-PAPER.CODE 1402.CODE
+ 1756  grep 'work th' *.py
+ 1757  code basicSwitchboard.py 
+ 1758  grep -i 'test misc' *.py
+ 1759  wipb
+ 1760  firefox 
+ 1761  wipb
+ 1762  echo 1525.MARK
+ 1763  nano 1525.MARK
+ 1764  wipb;wipa
+ 1765  exit
+ 1766  sudo ls
+ 1767  ls
+ 1768  mv _usr_bin_nemo.0.crash Stashed-003
+ 1769  sudo mv _usr_bin_nemo.0.crash Stashed-003
+ 1770  code main.py 
+ 1771  ls -ltrh *.py
+ 1772  wipb;code modalSimple.py 
+ 1773  cp modalSimple.py 1930.BU
+ 1774  cp modalSimple.py 1931.BU
+ 1775  grep -i 'a nafl ide' *.py
+ 1776  code basicSwitchboard.py 
+ 1777  wipb
+ 1778  nano 1944.MARK
+ 1779  ls -ltrh
+ 1780  nano 1944.MARK
+ 1781  wipb
+ 1782  ls -ltrh
+ 1783  mkdir "List IO Development"
+ 1784  cd List\ IO\ Development/
+ 1785  cp ../1948-py.tar.gz .
+ 1786  ls
+ 1787  mv 1948-py.tar.gz 'Getting There-py.tar.gz' 
+ 1788  cd ..
+ 1789  ls -ltrh
+ 1790  exit
+ 1791  chmod 444 *
+ 1792  ls -lSr
+ 1793  tar -czf ../line-items-1955.tar *
+ 1794  ls -lSr
+ 1795  ls -ltrh ..
+ 1796  cd ..
+ 1797  pwd
+ 1798  ls -ltrh
+ 1799  rm 2106.tar 
+ 1800  cp line-items-1955.tar ../../Day535
+ 1801  cd ../..
+ 1802  cd Day535
+ 1803  wipb;wipa
+ 1804  cd ..
+ 1805  ls -ltrh
+ 1806  sudo ls
+ 1807  sudo chown -r dank *
+ 1808  sudo chown -R dank *
+ 1809  exit
+ 1810  df -h .
+ 1811  exit
+ 1812  ls -l
+ 1813  chmod 777 *
+ 1814  exit
+ 1815  sudo ls
+ 1816  chmod -R 777  .
+ 1817  chmod -R 777  *
+ 1818  exit
+ 1819  killall -9 nemo
+ 1820  killall -9 kkkkkkkkkkkkk
+ 1821  exit
+ 1822  killall -9 chrome
+ 1823  touch main.py 
+ 1824  wipb;wipa
+ 1825  ls *.sh
+ 1826  history 
+ 1827  ls -ltrh ..
+ 1828  code .
+ 1829  eho l 200 # out
+ 1830  echo l 200 # out
+ 1831  wipb
+ 1832  ls -ltrh *.py
+ 1833  cp modalSimple.py 1602.BU
+ 1834  rm SCRAP-PAPER.CODE 
+ 1835  touch SCRAP-PAPER.CODE 
+ 1836  code SCRAP-PAPER.CODE 
+ 1837  cp modalSimple.py 1638.BU
+ 1838  cp modalSimple.py 1654.BU
+ 1839  ls -ltrh
+ 1840  ls -ltr *.gz
+ 1841  tar -xf 1552-py.tar.gz 
+ 1842  wipb
+ 1843  ls -ltrh *.gz
+ 1844  grep lovelyLister *.py
+ 1845  wipb
+ 1846  echo config( height = height_In_Lines )
+ 1847  echo self.real_TkListWidg 
+ 1848  wipb;wipa
+ 1849  killall -0 chrome
+ 1850  killall -9 chrome
+ 1851  cd ..
+ 1852  sudo cp -pr Day535 Day536
+ 1853  killall -9 chrome
+ 1854  ls -ltrh
+ 1855  cd Dat536
+ 1856  cd Day536
+ 1857  ls -l Day536
+ 1858  sudo chmod 777 Day536
+ 1859  ls -l Day536
+ 1860  ls -ltrh
+ 1861  sudo du -h Day535
+ 1862  sudo du -h Day536
+ 1863  ls -l Day536
+ 1864  ls -l Day536|wc
+ 1865  ls -l Day535|wc
+ 1866  sudo cp -pr Day535 Day536
+ 1867  ls -l Day535|wc
+ 1868  ls -l Day536|wc
+ 1869  ls -ltrh
+ 1870  cd Day536
+ 1871  ls -l
+ 1872  ls -ltrd *.
+ 1873  cd ..
+ 1874  ls -ltrd Day*
+ 1875  chmod 777 Day534
+ 1876  chmod 777 Day533
+ 1877  du -h Day533
+ 1878  du -h Day534
+ 1879  du -h Day535
+ 1880  cd About_WIXM/
+ 1881  cd Venter\ V3\ simulation/
+ 1882  cd  Python_and_Dan/
+ 1883  ls -ltrh
+ 1884  chmod 0 Day5??
+ 1885  chmod 777 Day536
+ 1886  cd Day536
+ 1887  code main.py 
+ 1888  chmod 777 Day53?
+ 1889  chmod 777 ../Day53?
+ 1890  cd ..
+ 1891  cd Day534
+ 1892  ./go-cli.sh 
+ 1893  cd ..
+ 1894  chmod 0 Day534
+ 1895  cd Day535
+ 1896  ./go-cli.sh 
+ 1897  cd ..
+ 1898  cd Day536
+ 1899  code main.py 
+ 1900  chmod 0 ../Day535
+ 1901  cd ..
+ 1902  ls -ltrh
+ 1903  cd Day536
+ 1904  code manageSequences.py 
+ 1905  grep -i 'managing seq' *.py
+ 1906  code taskingFunction.py 
+ 1907  nano 1946.CODE
+ 1908  grep seqbp *.py
+ 1909  code manageSequences.py 
+ 1910  echo llsizeh
+ 1911  exit
+ 1912  chmod 444 *
+ 1913  exit
+ 1914  touch .
+ 1915  touch ./..
+ 1916  touch ./../..
+ 1917  touch ./../../..
+ 1918  touch ./../../../..
+ 1919  touch ./../../../../..
+ 1920  wipb;wipa
+ 1921  ls -ltrh
+ 1922  rm *.gz
+ 1923  rm *.bz
+ 1924  wipb;wipa
+ 1925  ls -ltrh ..
+ 1926  rm ../1910-ALLALL.tar.gz 
+ 1927  code .
+ 1928  grep -i 'bc-gu' *.py
+ 1929  ls m*.py
+ 1930  grep -i 'bc-gu' *.py
+ 1931  code modalSimple.py 
+ 1932  wipb;wipa
+ 1933  code globalIdeas.py 
+ 1934  code screenBuilder1.py 
+ 1935  png-to-jpg-C
+ 1936  rm *.png
+ 1937  ls -ltrd *.
+ 1938  ls -ltrd
+ 1939  ls
+ 1940  ls -ltrhd *.
+ 1941  ls -ltrd *.
+ 1942  ls -ltrd */
+ 1943  mkdir "16 Nov 2023 Prev to 1051"
+ 1944  cd "16 Nov 2023 Prev to 1051"/
+ 1945  mv ../*.jpg .
+ 1946  ls
+ 1947  cd ..
+ 1948  ls
+ 1949  ls -l
+ 1950  cat Tuna\ before\ today\ by\ time.REPORT 
+ 1951  cat Tuna\ before\ today\ by\ time.REPORT |more
+ 1952  rm Tuna\ before\ today\ by\ time.REPORT 
+ 1953  exit
+ 1954  nano 1318.CODE
+ 1955  cd ..
+ 1956  png-to-jpg-D
+ 1957  ls -ltrh
+ 1958  rm *.png
+ 1959  ls -l
+ 1960  ls -lh
+ 1961  simplescreenrecorder 
+ 1962  ls -ltrh
+ 1963  png-to-jpg-D 
+ 1964  rm *.png
+ 1965  ./go-cli.sh 
+ 1966  grep WINDOWER_gulper_Primary *.py
+ 1967  code basicSwitchboard.py 
+ 1968  cp modalSimple.py 1344.CODE
+ 1969  code 1344.CODE 
+ 1970  ls -ltrh *.py
+ 1971  code screenBuilder1.py 
+ 1972  wipb;wipa
+ 1973  nano  1454.CODE
+ 1974  grep -i 'immediate pr' *.py
+ 1975  code basicSwitchboard.py 
+ 1976  wipb;wipa
+ 1977  grep -i 'boring ed' *.py
+ 1978  code fractionScreens.py 
+ 1979  wipb;wipa
+ 1980  df -h .
+ 1981  wipb
+ 1982  grep actionableMaker *.py
+ 1983  code sequencesOverview.py 
+ 1984  wipb;wipa
+ 1985  nano List-greatnewss-now.MARK
+ 1986  ls -ltrh
+ 1987  mv List-greatnewss-now.MARK  List-greatness-now.MARK 
+ 1988  s -ltrh
+ 1989  ls -ltrh
+ 1990  wipb
+ 1991  exit
+ 1992  wipb
+ 1993  killall -9 chrome
+ 1994  code windowsX.py 
+ 1995  nano 1905.MARK
+ 1996  cat 1905.MARK
+ 1997  touch .
+ 1998  touch ./..
+ 1999  touch ./../..
+ 2000  touch ./../../..
+ 2001  df -h .
+ 2002  ls *.gz
+ 2003  ls -ltrh *..gz
+ 2004  ls -ltrh *.gz
+ 2005  ls -lSr
+ 2006  cd ..
+ 2007  sudo ls
+ 2008  sudo cp -pr Day536 Day537
+ 2009  chmod 0 Day5??
+ 2010  chmod 777 Day537
+ 2011  cd Day537
+ 2012  ls &*.gz
+ 2013  ls *.gz
+ 2014  rm *.gz
+ 2015  ls *.bz
+ 2016  rm *.bz
+ 2017  code main.py 
+ 2018  rm -r __pycache__/
+ 2019  wipb;wipb;wipa
+ 2020  ls -ltrh ..
+ 2021  code .
+ 2022  wipb
+ 2023  code .
+ 2024  grep -i 'class warf' *.py
+ 2025  grep -i warf *.py
+ 2026  code fractionScreens.py 
+ 2027  ls -ltrh fractionScreens.py 
+ 2028  ls -lSr *.py
+ 2029  ls -lSrh *.py
+ 2030  code basicSwitchboard.py 
+ 2031  GREP -I 'FUNNY GULP' *.PY
+ 2032  grep -i 'funny gulper' *.py
+ 2033  code insertableEditors.py 
+ 2034  killall -9 chrome
+ 2035  grep -i 'household man' *.py
+ 2036  grep -i 'household' *.py
+ 2037  nano 2048.MARK
+ 2038  wipb
+ 2039  grep -i warf *.py
+ 2040  code fractionScreens.py 
+ 2041  grep tkfont *.py
+ 2042  ls -ltrh
+ 2043  tar -xf 2107-py.tar.gz 
+ 2044  wipb
+ 2045  code fractionScreens.py 
+ 2046  wipb
+ 2047  wipb;wipa
